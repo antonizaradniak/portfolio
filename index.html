@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== ZMIEŃ NA SWOJE: tytuł i opis widoczny w Google ====== -->
+  <title>[Imię Nazwisko] — Front-end Developer</title>
+  <meta name="description" content="Tworzę szybkie, nowoczesne strony internetowe dla lokalnych firm i przedsiębiorców. HTML, CSS, JavaScript, React." />
+
+  <!-- Czcionki (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ NAWIGACJA ============ -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo">
+        <span class="nav__logo-mark">&lt;/&gt;</span>
+        <!-- ZMIEŃ NA SWOJE inicjały lub imię -->
+        <span class="nav__logo-text">[Imię]</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Nawigacja główna">
+        <a href="#uslugi">Usługi</a>
+        <a href="#projekty">Projekty</a>
+        <a href="#technologie">Technologie</a>
+        <a href="#o-mnie">O mnie</a>
+        <a href="#kontakt" class="nav__cta">Napisz do mnie</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Otwórz menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero__grid">
+
+        <div class="hero__text">
+          <p class="eyebrow">Front-end Developer · Polska / zdalnie</p>
+          <h1 class="hero__title">
+            Cześć, jestem <span class="hl">[Imię]</span>.
+          </h1>
+          <!-- Ta linijka zmienia się automatycznie (patrz js/main.js) -->
+          <p class="hero__role">
+            <span class="hero__role-prefix">&gt;</span>
+            <span id="typed" class="hero__typed"></span><span class="caret" aria-hidden="true"></span>
+          </p>
+          <p class="hero__lead">
+            Buduję strony internetowe, które nie tylko dobrze wyglądają, ale przede
+            wszystkim przynoszą klientów. Szybkie, czytelne i dopracowane na każdym
+            urządzeniu.
+          </p>
+          <div class="hero__actions">
+            <a href="#kontakt" class="btn btn--primary">Zróbmy stronę</a>
+            <a href="#projekty" class="btn btn--ghost">Zobacz projekty</a>
+          </div>
+        </div>
+
+        <!-- Sygnaturowy element: "wizytówka jako kod" -->
+        <div class="hero__card" aria-hidden="true">
+          <div class="codecard">
+            <div class="codecard__bar">
+              <span class="dot dot--r"></span>
+              <span class="dot dot--y"></span>
+              <span class="dot dot--g"></span>
+              <span class="codecard__file">developer.js</span>
+            </div>
+            <pre class="codecard__body"><code><span class="c-key">const</span> <span class="c-var">developer</span> <span class="c-op">=</span> {
+  <span class="c-prop">imię</span>: <span class="c-str">"[Imię]"</span>,
+  <span class="c-prop">rola</span>: <span class="c-str">"Front-end Developer"</span>,
+  <span class="c-prop">stack</span>: [<span class="c-str">"HTML"</span>, <span class="c-str">"CSS"</span>, <span class="c-str">"JS"</span>, <span class="c-str">"React"</span>],
+  <span class="c-prop">lokalizacja</span>: <span class="c-str">"Polska"</span>,
+  <span class="c-prop">dostępny</span>: <span class="c-bool">true</span>,
+};</code></pre>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ USŁUGI ============ -->
+    <section class="section" id="uslugi">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">01 — Co robię</p>
+          <h2 class="section__title">Strony, które pracują na Twój biznes</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card__num">01</div>
+            <h3 class="card__title">Strony wizytówki</h3>
+            <p class="card__text">
+              Nowoczesna, szybka strona, która buduje zaufanie i sprawia, że klient
+              do Ciebie dzwoni. Responsywna na telefonie, gotowa na wyszukiwarkę Google.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__num">02</div>
+            <h3 class="card__title">Landing page sprzedażowe</h3>
+            <p class="card__text">
+              Strona nastawiona na jeden konkretny cel: zamówienie, zapis albo kontakt.
+              Projektuję ją tak, żeby prowadziła odwiedzającego prosto do działania.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__num">03</div>
+            <h3 class="card__title">Poprawki i optymalizacja</h3>
+            <p class="card__text">
+              Masz stronę, która wolno się ładuje albo źle wygląda na telefonie?
+              Naprawiam błędy, przyspieszam i doprowadzam wszystko do porządku.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJEKTY ============ -->
+    <!--
+      WAŻNE: to są przykładowe kafelki-szablony. Podmień je na swoje realne projekty.
+      Dla każdego projektu zmień: obrazek (miniaturkę), tytuł, opis, użyte technologie
+      oraz linki (podgląd na żywo + kod na GitHubie).
+      W pliku README.md masz listę 3 projektów, które warto zbudować na start.
+    -->
+    <section class="section section--alt" id="projekty">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">02 — Wybrane projekty</p>
+          <h2 class="section__title">Rzeczy, które zbudowałem</h2>
+        </div>
+
+        <div class="projects">
+
+          <article class="project">
+            <div class="project__thumb project__thumb--1">
+              <span class="project__thumb-label">podmień na screen</span>
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Strona dla salonu fryzjerskiego</h3>
+              <p class="project__text">
+                Wizytówka z galerią, cennikiem i przyciskiem rezerwacji. Ładuje się
+                w mniej niż sekundę i świetnie wygląda na telefonie.
+              </p>
+              <ul class="tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li>
+              </ul>
+              <div class="project__links">
+                <a href="#" class="link">Podgląd na żywo →</a>
+                <a href="#" class="link link--muted">Kod na GitHubie</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__thumb project__thumb--2">
+              <span class="project__thumb-label">podmień na screen</span>
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Landing page dla warsztatu</h3>
+              <p class="project__text">
+                Strona sprzedażowa z formularzem kontaktowym i mapą dojazdu.
+                Nastawiona na jeden cel — umówienie wizyty.
+              </p>
+              <ul class="tags">
+                <li>React</li><li>CSS</li><li>Formularz</li>
+              </ul>
+              <div class="project__links">
+                <a href="#" class="link">Podgląd na żywo →</a>
+                <a href="#" class="link link--muted">Kod na GitHubie</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__thumb project__thumb--3">
+              <span class="project__thumb-label">podmień na screen</span>
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Aplikacja — lista zadań</h3>
+              <p class="project__text">
+                Interaktywna aplikacja w Reakcie z zapisem danych. Pokazuje, że
+                radzę sobie nie tylko z wyglądem, ale i z logiką.
+              </p>
+              <ul class="tags">
+                <li>React</li><li>JavaScript</li><li>Hooks</li>
+              </ul>
+              <div class="project__links">
+                <a href="#" class="link">Podgląd na żywo →</a>
+                <a href="#" class="link link--muted">Kod na GitHubie</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECHNOLOGIE ============ -->
+    <section class="section" id="technologie">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">03 — Narzędzia</p>
+          <h2 class="section__title">Z czym pracuję na co dzień</h2>
+        </div>
+
+        <ul class="stack">
+          <li class="stack__item">HTML5</li>
+          <li class="stack__item">CSS3</li>
+          <li class="stack__item">JavaScript</li>
+          <li class="stack__item">React</li>
+          <li class="stack__item">Responsive Design</li>
+          <li class="stack__item">Git &amp; GitHub</li>
+          <li class="stack__item">Figma</li>
+          <li class="stack__item">Optymalizacja SEO</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ O MNIE ============ -->
+    <section class="section section--alt" id="o-mnie">
+      <div class="container about">
+        <div class="section__head section__head--tight">
+          <p class="eyebrow">04 — O mnie</p>
+        </div>
+        <div class="about__body">
+          <p class="about__lead">
+            Tworzę strony internetowe dla lokalnych firm i przedsiębiorców.
+          </p>
+          <p class="about__text">
+            <!-- Napisz tu kilka zdań o sobie własnymi słowami -->
+            Zależy mi na tym, żeby to, co robię, było proste w obsłudze i naprawdę
+            pomagało — żeby klient znalazł kontakt w dwie sekundy, a właściciel firmy
+            dostał więcej telefonów. Piszę czysty kod, dbam o szybkość działania i
+            testuję każdą stronę na telefonie, tablecie i komputerze.
+          </p>
+          <p class="about__text">
+            Poza kodem lubię [Twoje zainteresowanie — zmień to na coś prawdziwego].
+            Aktualnie jestem otwarty na nowe zlecenia i współpracę.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KONTAKT ============ -->
+    <section class="section contact" id="kontakt">
+      <div class="container contact__inner">
+        <p class="eyebrow">05 — Kontakt</p>
+        <h2 class="contact__title">Masz pomysł na stronę?<br />Napisz — odpowiadam w 24h.</h2>
+
+        <!-- ZMIEŃ adres e-mail w href oraz w treści -->
+        <a href="mailto:[twoj@email.pl]" class="btn btn--primary btn--lg">[twoj@email.pl]</a>
+
+        <div class="contact__socials">
+          <!-- ZMIEŃ linki na swoje -->
+          <a href="https://github.com/[twojlogin]" class="link">GitHub</a>
+          <a href="https://linkedin.com/in/[twojlogin]" class="link">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ STOPKA ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> [Imię Nazwisko]</span>
+      <span class="footer__made">Zbudowane w HTML, CSS i JavaScript</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
